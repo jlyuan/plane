@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>飞机大战</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .screen{
+            overflow:hidden;
+            /* border:1px solid black; */
+            position:relative;
+            width:540px;height:500px;
+            margin: 20px auto;
+        }
+        .wrap{
+            position:absolute;
+            top:-500px;
+        }
+        .bg{
+            background:url(./images/bg.jpg);
+            background-size: 400px 500px;
+            width:400px;height:500px;
+        }
+        .plane{
+            background:url(./images/plane.png);
+            position:absolute;
+            background-size: 40px 50px;
+            width:40px;height:50px;
+            left:200px;
+            top:450px;
+        }
+        .bullet{
+            position:absolute;
+            width:6px;
+            height:8px;
+            background:yellowgreen;
+        }
+        .enemyPlane{
+            background:url(./images/enemyPlane.png);
+            position:absolute;
+            background-size: 20px 20px;
+            transform: rotate(180deg);
+            width:20px;height:20px;
+            left:200px;
+            top:10px;
+        }
+        #score{
+            position:absolute;
+            left:420px;
+            top:10px;
+        } 
+    </style>
+</head>
+<body>
+    <div id="screen" class="screen">
+        <div id="wrapBg" class="wrap">
+                <div class="bg"></div>
+                <div class="bg"></div>
+        </div>
+        <div id="airPlane" class="plane"></div>
+        <div id="score">
+               分数: 0
+        </div>
+    </div>
+    <script src="./js/index.js"></script>
+</body>
+</html>
